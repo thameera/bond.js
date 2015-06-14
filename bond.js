@@ -3,6 +3,7 @@
  * Simple two-way data binding library for the browser
  *
  * Author: Thameera Senanayaka
+ * License: MIT
  */
 
 ;(function(window, define) {
