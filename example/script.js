@@ -1,5 +1,8 @@
-var myvar = Bond('myvar', 'do you');
+var city = Bond('city');
 
-//name.set(42);
-console.log(myvar.get());
+city.set('Colombo');
+console.log( city.get() );
+
+// Optional initial value
+var country = Bond('country', 'Sri Lanka');
 
