@@ -2,6 +2,12 @@
 
 Simple two-way data binding library for the browser.
 
+## Install
+
+* With npm: `npm install jsbond`
+* With bower: `bower install jsbond`
+* Or just download the bond.js file to your project.
+
 ## Usage
 
 Include bond.js:

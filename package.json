@@ -1,6 +1,6 @@
 {
   "name": "jsbond",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple two-way data binding library for the browser.",
   "main": "bond.js",
   "repository": {
