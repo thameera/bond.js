@@ -1,9 +1,9 @@
-;(function(window) {
+;(function(window, define) {
 
   var boundVals = {};
   var ATTR_NAME = 'data-bond';
 
-  window.Bond = function(varName, initialValue) {
+  var Bond = function(varName, initialValue) {
 
     if (boundVals[varName]) {
       console.warn('Bond: Duplicate name detected: ' + varName);
@@ -54,5 +54,15 @@
     return boundVals[varName];
   };
 
-})(window);
+  if (typeof define === 'function' && define.amd !== undefined) {
+    define(function () {
+      return Bond;
+    });
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Bond;
+  } else {
+    window.Bond = Bond;
+  }
+
+})(this, this.define);
 
