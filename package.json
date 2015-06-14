@@ -1,0 +1,20 @@
+{
+  "name": "jsbond",
+  "version": "0.1.0",
+  "description": "Simple two-way data binding library for the browser.",
+  "main": "bond.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thameera/jsbond.git"
+  },
+  "keywords": [
+    "binding",
+    "databind"
+  ],
+  "author": "Thameera Senanayaka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thameera/jsbond/issues"
+  },
+  "homepage": "https://github.com/thameera/jsbond"
+}
