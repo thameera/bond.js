@@ -1,4 +1,4 @@
-# Bond.js
+# JS Bond
 
 Simple two-way data binding library for the browser.
 
