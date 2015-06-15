@@ -6,3 +6,5 @@ console.log( city.get() );
 // Optional initial value
 var country = Bond('country', 'Sri Lanka');
 
+var gender = Bond('gender', 'Male');
+

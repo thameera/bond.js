@@ -11,6 +11,11 @@
   var boundVals = {};
   var ATTR_NAME = 'data-bond';
 
+  var isInputElement = function(tagName) {
+    var tag = tagName.toLowerCase();
+    return (tag === 'input' || tag === 'select' || tag === 'textarea');
+  };
+
   var Bond = function(varName, initialValue) {
 
     // Duplicate check
@@ -27,7 +32,7 @@
       // Updates all DOM elements bound to the current Bond
       var updateDOM = function(val) {
         observers.forEach(function(obs) {
-          if (obs.tagName === 'INPUT') {
+          if (isInputElement(obs.tagName)) {
             obs.value = __val;
           } else {
             obs.innerHTML = __val;
@@ -50,7 +55,7 @@
       var elements = document.querySelectorAll('[' + ATTR_NAME + '="' + varName + '"]');
       for (var i = 0; i < elements.length; i++) {
         // Attach event listers to input elements
-        if (elements[i].tagName === 'INPUT') {
+        if (isInputElement(elements[i].tagName)) {
           elements[i].addEventListener('input', function(e) {
             obj.set(e.target.value);
           });
