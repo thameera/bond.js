@@ -28,10 +28,17 @@
     var newBond = (function() {
       var __val = null;
       var observers = [];
+      var curTarget = null;
 
       // Updates all DOM elements bound to the current Bond
       var updateDOM = function(val) {
         observers.forEach(function(obs) {
+          // Do not update the element being changed (if any)
+          if (obs === curTarget) {
+            curTarget = null;
+            return;
+          }
+
           if (isInputElement(obs.tagName)) {
             obs.value = __val;
           } else {
@@ -57,6 +64,7 @@
         // Attach event listers to input elements
         if (isInputElement(elements[i].tagName)) {
           elements[i].addEventListener('input', function(e) {
+            curTarget = e.target;
             obj.set(e.target.value);
           });
         }

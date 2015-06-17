@@ -1,7 +1,7 @@
 {
   "name": "jsbond",
   "main": "bond.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/thameera/jsbond",
   "authors": [
     "Thameera Senanayaka <thameera123@gmail.com>"
