@@ -22,11 +22,17 @@ JavaScript:
     console.log( city.get() );
 
     // Optional initial value
-    var country = Bond('country', 'Sri Lanka');
-    console.log( country.get() );
+    var gender = Bond('gender', 'Male');
+    console.log( gender.get() );
 
 HTML:
 
     <input type="text" data-bond="city">
-    <div>Name is <span data-bond="city"></span></div>
+    <div>City is <span data-bond="city"></span></div>
+
+    <select data-bond="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
 
